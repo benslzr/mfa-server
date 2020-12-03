@@ -1,71 +1,56 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <b-container><top-header></top-header></b-container>
-      <div id="lower-nav">
-      <b-container>
-        <lower-header></lower-header>
-        <Todos v-bind:todos="todos" />
-        </b-container>
-    </div>
-    </div>
-    <div>
-      <b-container>
+    <b-container fulid>
+      <div id="nav">
+        <top-header></top-header>
+      </div>
         <router-view/>
+        <my-footer></my-footer>
       </b-container>
     </div>
-  </div>
 </template>
 <script>
-import Todos from './components/Todos';
-import TopHeader from "@/components/TopHeader.vue"
-import  LowerHeader from "@/components/LowerHeader.vue"
+import TopHeader from "@/components/TopHeader.vue";
+import Footer from './components/Footer.vue';
+
 // @ is an alias to /src
 export default {
   name: 'app',
   components: {
     "top-header": TopHeader,
-    "lower-header": LowerHeader,
-    Todos
+    "my-footer": Footer
   },
-  data() {
-    return {
-      todos: [
-        {
-          id: 1,
-          title: "Benjamin Salazar",
-          completed: false
-        },
-        {
-          id: 2,
-          title: "Howard Cole",
-          completed: true
-        }
-      ]
-    }
-  }
 };
 </script>
 <style lang="scss">
+.main-content {
+  min-height: 350px;
+}
+
+#main-box {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  min-height: 250px;
+  border-style: solid;
+  border-width: thin;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #e5e4e4;
   background: rgb(2,0,36);
-  background: radial-gradient(circle, rgba(2,0,36,0.02238581730769229) 0%, rgba(255,193,200,1) 56%);
+  background: radial-gradient(circle, rgba(255,255,255,1) 33%, rgba(229,228,228,1) 72%);
 }
 
 #nav {
   padding: 30px;
-
   a {
-    font-weight: bold;
-    color: #2c3e50;
-
     &.router-link-exact-active {
-      color: #42b983;
+      color: #e32626;
     }
   }
 }

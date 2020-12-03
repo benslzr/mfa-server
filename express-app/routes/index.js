@@ -56,7 +56,46 @@ router.get('/restservices/RESTService.svc/IsAvailable', function(req, res, next)
 
 /* GET data page. */
 router.get('/api/v1/users/bsalazar/idauto', function(req, res, next) {
-  res.json({ username: 'Flavio' })
+  res.json({"data": {
+    "type": "user",
+    "userId": 4,
+    "username": "bsalazar",
+    "domain": "IDAUTO",
+    "authMethods":    [
+             {
+          "type": "authMethod",
+          "authMethodId": 2,
+          "authProfileId": 0,
+          "displayName": "AD",
+          "pinRequired": false,
+          "pinLabel": ""
+       },
+             {
+          "type": "authMethod",
+          "authMethodId": 3,
+          "authProfileId": 1,
+          "displayName": "Question and Answer",
+          "pinRequired": false,
+          "pinLabel": ""
+       },
+             {
+          "type": "authMethod",
+          "authMethodId": 10,
+          "authProfileId": 8,
+          "displayName": "OTP",
+          "pinRequired": false,
+          "pinLabel": "PIN"
+       },
+             {
+          "type": "authMethod",
+          "authMethodId": 15,
+          "authProfileId": 10,
+          "displayName": "FIDO",
+          "pinRequired": false,
+          "pinLabel": "PIN"
+       }
+    ]
+ }})
 });
 
 /* POST /api/login */

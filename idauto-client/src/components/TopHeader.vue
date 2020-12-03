@@ -1,7 +1,7 @@
 <template>
-    <div>
-  <b-navbar toggleable="lg" type="dark" variant="light">
-    <b-navbar-brand href="#">ONE PORTAL</b-navbar-brand>
+  <div id="top-navigation">
+  <b-navbar toggleable="lg" type="dark" variant="dark">
+    <b-navbar-brand href="/">ONE PORTAL</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -9,8 +9,9 @@
       <b-navbar-nav>
         <b-nav-item to="/">Home</b-nav-item>
         <b-nav-item to="/users">Users</b-nav-item>
-        <b-nav-item href="/#/one/clients">Clients</b-nav-item>
-        <b-nav-item href="/#/one/settings">Settings</b-nav-item>
+        <b-nav-item href="/clients">Clients</b-nav-item>
+        <b-nav-item href="/settings">Settings</b-nav-item>
+        <b-nav-item to="/support">Help</b-nav-item>
         <b-nav-item to="/about">About</b-nav-item>
       </b-navbar-nav>
 
@@ -28,7 +29,11 @@
 
 <style lang="scss" scoped>
 #nav a.router-link-exact-active{
-    color: lightseagreen
+    color: #e32626
 }
 
+#top-navigation{
+  background: #5b6a73;
+  margin-bottom: 10px;
+}
 </style>

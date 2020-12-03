@@ -1,6 +1,6 @@
 <template>
     <div>
-          <b-card title="Card title" sub-title="Card subtitle">
+    <b-card title="User Lookup" sub-title="subtitle">
     <b-card-text>
       Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
       content.
